@@ -1,0 +1,3 @@
+1. Upon starting, PiSH shall output two dashes.
+2. Upon needing input, PiSH shall output a dot.
+3. Upon successfully obtaining input, PiSH shall output a dash.
