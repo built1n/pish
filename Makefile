@@ -1,5 +1,5 @@
-SOURCES = led.o morse.o main.o
-HEADERS = led.h morse.h
+SOURCES = led.o morse.o parse.o main.o
+HEADERS = led.h morse.h parse.h
 CXXFLAGS = -I.
 pish: $(SOURCES) $(HEADERS) Makefile
 	g++ $(SOURCES) -o pish
