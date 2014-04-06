@@ -32,7 +32,7 @@ void transmit(const string& str)
       tmp=toupper(ch);
       string morse=table[tmp];
       if(morse!="")
-	cout << ch << ": " << flush;
+	cout << toupper(ch) << ": " << flush;
       for(unsigned int j=0;j<morse.length();++j)
 	{
 	  char morseCh=morse[j];
