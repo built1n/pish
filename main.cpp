@@ -12,7 +12,6 @@ int main(int argc, char* argv[])
   if(geteuid()!=0) // must be root to control LEDS!
     {
       cerr << "Need to be root to control LEDs!"<< endl;
-      cerr << "Current user ID: " << geteuid() << endl;
       return 1;
     }
   parse_args(argc, argv);
