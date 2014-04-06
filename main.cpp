@@ -2,6 +2,7 @@
 #include <led.h>
 #include <morse.h>
 #include <iostream> // let the user use this with a screen, too
+#include <parse.h>
 using namespace std;
 void parse_args(int argc, char* argv[])
 {
@@ -12,22 +13,24 @@ int main(int argc, char* argv[])
   if(geteuid()!=0) // must be root to control LEDS!
     {
       cerr << "Need to be root to control LEDs!"<< endl;
-      return 1;
+      cerr << "PiSH will work fine, but the LEDs can not be used." << endl;
     }
   parse_args(argc, argv);
+  init_morse();
+  dash();
+  usleep(250000);
+  dash();
+  usleep(250000);
   cout << "PiSH initializied." << endl;
-  dash();
-  usleep(250000);
-  dash();
-  usleep(250000);
   string cmd;
   while(cmd!="exit")
     {
       dot();
       cout << "PiSH> ";
       getline(cin, cmd);
-      dash();
-      usleep(250000);
+      pish_parse(cmd);
+      cin.clear();
+      sleep(1);
     }
 }
 
