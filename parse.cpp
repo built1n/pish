@@ -96,7 +96,8 @@ void pish_parse(const string& str)
     {
       dash();
       usleep(250000);
-      char* pwd=getcwd(0,0);
+      char* pwd=getcwd(0,0); // is this extension Linux only?
+      cout << pwd << endl;
       transmit(string(pwd));
       free(pwd);
       usleep(25000);
