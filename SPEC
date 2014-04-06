@@ -1,3 +1,7 @@
 1. Upon starting, PiSH shall output two dashes.
 2. Upon needing input, PiSH shall output a dot.
-3. Upon successfully obtaining input, PiSH shall output a dash.
+3. Upon receiving an invalid command, PiSH shall output two dots.
+4. Upon receiving a valid command and beginnin execution, PiSH shall output a dash.
+5. Upon the failure of a command, two dots shall be outputted.
+6. Upon the sucess of a command, a dash shall be outputted.
+7. After a command has either failed or completed, PiSH will wait for one second before awaiting input again.
