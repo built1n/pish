@@ -8,3 +8,5 @@ clean:
 	rm -f *~
 	rm -f *.o
 	rm -f pish
+install: pish
+	cp pish /bin
