@@ -11,3 +11,4 @@
    - exec CMD [ARGS] - execute the shell command CMD with the arguments ARGS in the current working directory
    - cd PATH - change the current working directory to PATH
    - pwd - transmit the current working directory in Morse code
+9. Upon receiving ANY signal, PiSH shall output two dashes and exit.
